@@ -1,0 +1,290 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+h1, h2, h3, h4{
+    font-family: 'DM Sans', sans-serif;
+}
+
+p{
+    font-family: 'Oxygen', sans-serif;
+}
+
+:root{
+    scroll-behavior: smooth;
+    --blue2: #B7BAF6;
+    --blue: #121BDF;
+    --background: #9E9DA5;
+    --green: #68E237;
+    --white: #fff;
+}
+
+/* header */
+
+.container{
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 80px 0;
+}
+
+.container--hero{
+    padding: 0;
+}
+
+.logo__nav{
+    font-weight: 700;
+    font-size: 2rem;
+}
+
+.nav{
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav__menu{
+    background-color: var(--blue2);
+    width: 35px;
+    cursor: pointer;
+    z-index: 100;
+    border-radius: 5px;
+}
+
+.nav__lista{
+    font-family: 'Oxygen', sans-serif;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: var(--blue);
+    padding: 80px 0;
+    display: grid;
+    place-content: center;
+    text-align: center;
+    gap: 2.5rem;
+    list-style: none;
+    transform: translate(-100%);
+    transition: transform .2s;
+}
+
+.nav__lista--show{
+    transform: translate(0);
+}
+
+.nav__link{
+    text-decoration: none;
+    color: #fff;
+    font-weight: 400;
+}
+
+.hero__main{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.hero__figura{
+    order: -1;
+    padding: 20px;
+}
+
+.hero__img{
+    width: 100%;
+    display: block;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.hero__texto{
+    display: grid;
+    gap: 1.5rem;
+    text-align: center;
+    padding-bottom: 70px;
+}
+
+.hero__titulo{
+    font-size: 2rem;
+}
+
+.hero__parrafo{
+    line-height: 1.5;
+    font-weight: 300;
+    margin-bottom: .5rem;
+}
+
+.hero__cta{
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 700;
+    background-color: var(--grin);
+    color: #fff;
+    text-decoration: none;
+    padding: .6rem 3rem;
+    justify-self: center;
+    border-radius: 6px;
+}
+
+/* main */
+
+.about{
+    background-color: var(--blue2);
+}
+
+.about__container{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.about__img{
+    display: block;
+    margin: 0 auto;
+    width: 90%;
+    aspect-ratio: 1/1;
+    max-width: 280px;
+    object-fit: cover;
+    object-position: top;
+    border-radius: 50%;
+}
+
+.about__texto{
+    text-align: center;
+    display: grid;
+    gap: 1.5rem;
+}
+
+.subtitulo{
+    text-align: center;
+    font-size: 2rem;
+}
+
+.parrafo{
+    line-height: 1.5;
+    font-weight: 300;
+}
+
+/* items */
+
+.items__container{
+    margin-top: 3rem;
+    padding: 50px 25px;
+    display: grid;
+    gap: 3rem;
+    
+}
+
+.items__articulo{
+    text-align: center;
+    max-width: 500px;
+    margin: 0 auto;
+    display: grip;
+    gap: 1rem;
+}
+
+.items__img{
+    display: block;
+    margin: 0 auto;
+    max-width: 250px;
+    width: 60%;
+}
+
+/* estadisticas */
+
+.estadistica{
+    background-image: linear-gradient(#19181bc0, #171719e3), url('../imagenes/proceso-comercial-grandes-empresas.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    text-align: center;
+}
+
+.estadistica .subtitulo{
+    padding-top: 20px;
+}
+
+.estadistica__container{
+    display: grid;
+    gap: 2rem;
+}
+
+.estadisticas__items{
+    width: 90%;
+    margin: 0 auto;
+    max-width: 400px;
+}
+
+.estadistica__titulo{
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.estadistica__cta{
+    font-family: 'Oxygen', sans-serif;
+    font-weight: 700;
+    background-color: var(--grin);
+    text-decoration: none;
+    color: #fff;
+    padding: 1rem 3rem;
+    border-radius: 6px;
+    justify-self: center; 
+}
+
+/* footer */
+.footer{
+    background-color: var(--background);
+}
+
+.footer__contacto{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    list-style: none;
+    padding: 0;
+    margin-top: 2rem;
+}
+
+.footer__link{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: var(--color);
+}
+
+.footer__item:nth-of-type(1){
+    --color: #1da1f2;
+}
+
+.footer__item:nth-of-type(2){
+    --color: #c32aa3;
+}
+
+.footer__item:nth-of-type(3){
+    --color: #ff0000;
+}
+
+.footer__img{
+    width: 28px;
+}
+
+.subtitulo__3{
+    text-align: center;
+    font-weight: 300;
+    line-height: 1,5;
+    font-size: 25px;
+    padding: 0 20px;  
+}
+
+.parrafo{
+    text-align: center;
+    font-size: 15px;
+}
+
+
+
