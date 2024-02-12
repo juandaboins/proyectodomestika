@@ -11,18 +11,22 @@ p{
     font-family: 'Oxygen', sans-serif;
 }
 
+body {
+    background: var(--color-cuarto);
+}
+
 :root{
     scroll-behavior: smooth;
-    --blue2: #B7BAF6;
-    --blue: #121BDF;
-    --background: #9E9DA5;
-    --green: #68E237;
-    --white: #fff;
+    --color-primario: #000000;
+    --color-secundario: #14213d;
+    --color-terciario: #ffffff;
+    --color-cuarto: #e5e5e5;
+    --color-quinto: #fca311;
 }
 
 /* header */
 
-.container{
+.container {
     width: 90%;
     max-width: 1200px;
     margin: 0 auto;
@@ -36,7 +40,8 @@ p{
 
 .logo__nav{
     font-weight: 700;
-    font-size: 2rem;
+    font-size: 20px;
+    color: var(--color-cuarto);
 }
 
 .nav{
@@ -44,10 +49,13 @@ p{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    background: var(--color-secundario);
+    border-radius: 30px;
+    padding: 0 20px;
 }
 
 .nav__menu{
-    background-color: var(--blue2);
+    background-color: var(--color-cuarto);
     width: 35px;
     cursor: pointer;
     z-index: 100;
@@ -57,11 +65,9 @@ p{
 .nav__lista{
     font-family: 'Oxygen', sans-serif;
     position: absolute;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    background-color: var(--blue);
+    inset: 0;
+    margin: auto;
+    background-color: var(--color-secundario);
     padding: 80px 0;
     display: grid;
     place-content: center;
@@ -78,7 +84,7 @@ p{
 
 .nav__link{
     text-decoration: none;
-    color: #fff;
+    color: var(--color-cuarto);
     font-weight: 400;
 }
 
@@ -90,11 +96,11 @@ p{
 
 .hero__figura{
     order: -1;
-    padding: 20px;
+    padding-top: 30px;
 }
 
 .hero__img{
-    width: 100%;
+    width: 70%;
     display: block;
     max-width: 400px;
     margin: 0 auto;
@@ -108,30 +114,34 @@ p{
 }
 
 .hero__titulo{
-    font-size: 2rem;
+    font-size: 25px;
+    color: var(--color-secundario);
 }
 
 .hero__parrafo{
     line-height: 1.5;
     font-weight: 300;
     margin-bottom: .5rem;
+    color: var(--color-secundario);
+    padding: 0 50px;
 }
 
 .hero__cta{
     font-family: 'DM Sans', sans-serif;
     font-weight: 700;
-    background-color: var(--grin);
-    color: #fff;
+    background-color: var(--color-quinto);
+    color: var(--color-cuarto);
     text-decoration: none;
-    padding: .6rem 3rem;
+    padding: 10px 40px;
     justify-self: center;
     border-radius: 6px;
+    box-shadow: 5px 5px 2px 2px #00000049;
 }
 
 /* main */
 
 .about{
-    background-color: var(--blue2);
+    background-color: var(--color-secundario);
 }
 
 .about__container{
@@ -145,35 +155,39 @@ p{
     margin: 0 auto;
     width: 90%;
     aspect-ratio: 1/1;
-    max-width: 280px;
+    max-width: 180px;
     object-fit: cover;
     object-position: top;
     border-radius: 50%;
+    box-shadow: 5px 5px 2px 2px #00000049;
 }
 
 .about__texto{
     text-align: center;
     display: grid;
-    gap: 1.5rem;
+    gap: 20px;
 }
 
 .subtitulo{
     text-align: center;
-    font-size: 2rem;
+    font-size: 25px;
+    color: var(--color-cuarto);
 }
 
 .parrafo{
     line-height: 1.5;
     font-weight: 300;
+    color: var(--color-cuarto);
+    padding: 0 50px;
 }
 
 /* items */
 
 .items__container{
-    margin-top: 3rem;
-    padding: 50px 25px;
+    margin-top: ;
+    padding: 50px 50px;
     display: grid;
-    gap: 3rem;
+    gap: 25px;
     
 }
 
@@ -190,6 +204,16 @@ p{
     margin: 0 auto;
     max-width: 250px;
     width: 60%;
+    padding-bottom: 20px;
+}
+
+.items__articulo .subtitulo {
+    color: var(--color-secundario);
+    padding-bottom: 20px;
+}
+
+.items__articulo .parrafo {
+    color: var(--color-secundario);
 }
 
 /* estadisticas */
@@ -198,44 +222,45 @@ p{
     background-image: linear-gradient(#19181bc0, #171719e3), url('../imagenes/proceso-comercial-grandes-empresas.jpg');
     background-size: cover;
     background-position: center;
-    color: #fff;
+    color: var(--color-cuarto);
     text-align: center;
 }
 
 .estadistica .subtitulo{
-    padding-top: 20px;
+    padding-top: 30px;
 }
 
 .estadistica__container{
     display: grid;
-    gap: 2rem;
+    gap: 25px;
 }
 
 .estadisticas__items{
-    width: 90%;
+    width: 70%;
     margin: 0 auto;
     max-width: 400px;
 }
 
 .estadistica__titulo{
-    font-size: 2rem;
-    margin-bottom: 1rem;
+    font-size: 25px;
+    margin-bottom: px;
 }
 
 .estadistica__cta{
     font-family: 'Oxygen', sans-serif;
     font-weight: 700;
-    background-color: var(--grin);
+    background-color: var(--color-quinto);
     text-decoration: none;
-    color: #fff;
-    padding: 1rem 3rem;
+    color: var(--color-cuarto);
+    padding: 20px 40px;
     border-radius: 6px;
     justify-self: center; 
+    box-shadow: 5px 5px 2px 2px #00000049;
 }
 
 /* footer */
 .footer{
-    background-color: var(--background);
+    background-color: var(--color-secundario);
 }
 
 .footer__contacto{
@@ -270,20 +295,21 @@ p{
 }
 
 .footer__img{
-    width: 28px;
+    width: 25px;
 }
 
 .subtitulo__3{
     text-align: center;
-    font-weight: 300;
-    line-height: 1,5;
+    font-weight: 500;
     font-size: 25px;
-    padding: 0 20px;  
+    color: var(--color-cuarto);  
 }
 
 .parrafo{
     text-align: center;
     font-size: 15px;
+    line-height: 1,5;
+    padding: 0 50px;
 }
 
 
